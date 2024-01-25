@@ -1,4 +1,8 @@
-.home__content{
+.home__container {
+    row-gap: 7rem;
+}
+
+.home__content {
     grid-template-columns: 116px 2fr 1fr;
     padding-top: 5.5rem;
     column-gap: 2rem;
@@ -63,13 +67,76 @@
 }
 
 @keyframes Profile_animate {
-    0%{
+    0% {
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
-    50%{
+
+    50% {
         border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
     }
-    100%{
+
+    100% {
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
+}
+
+.home__scroll {
+    margin-left: 9.25rem;
+}
+
+.wheel {
+    animation: scroll 2s ease infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    3% {
+        transform: translateY(3.75rem);
+    }
+}
+
+.home__scroll-name {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    margin-right: var(--mb-0-25);
+    margin-left: 2px;
+}
+
+.home__scroll-arrow {
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
+
+
+/*================ Breakpoint ==================*/
+/* For large Devices */
+@media screen and (max-width: 992px) {
+    .home__content {
+        grid-template-columns: 100px 2fr , 1fr;
+        column-gap: 1.25rem;
+    }
+    .home__hand {
+        width: 26px;
+        height: 26px;
+    }
+    .home__subtitle {
+        padding-left: 3.75rem;
+        margin-bottom: var(--mb-1);
+    }
+
+    .home__subtitle::before {
+        width: 42px;
+        top: 0.8rem;
+    }
+}
+
+/* For medium Devices */
+@media screen and (max-width: 768px) {}
+
+/* For small Devices */
+@media screen and (max-width: 350px) {
+    
 }
